@@ -2143,7 +2143,18 @@ function worldChannelAsk() {
     let input = document.getElementById('world-input');
     if (!input) return;
     let q = String(input.value || '').trim();
-    if (!q) return;
+    if (!q) return; 
+
+// GM 指令
+if (q === '/gm hp 99999') {
+    player.hp = 99999;
+    if (typeof saveGame === 'function') saveGame();
+    logWorld('<span class="wc-sys">GM：HP 已設定為 99999</span>');
+    input.value = '';
+    return;
+}
+
+let now = Date.now();
     let now = Date.now();
     if (now < _wcAskCooldownUntil) {
         logWorld('<span class="wc-sys">你講太快了，讓別人也說一下話。</span>');
