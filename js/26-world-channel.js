@@ -17,7 +17,7 @@ const WC_PERSONAS = ['helpful', 'veteran', 'sarcastic', 'newbie', 'trader'];
 let _wcNpcSeq = 0;
 let _wcNpcs = Object.create(null);          // id -> { name, persona, cls, alignmentValue, thanked, taunted, blocked }
 let _wcMenuOpenId = null;                    // 目前展開嘲諷/感謝選單的 NPC（同時只開一個）
-let _wcMenuDocHandler = null;                 // 點擊選單外時關閉浮動選單
+let _wcMenuDocHandler = null;                 // 點擊選單外時關閉浮動選單if (!q) return;
 let _wcAskCooldownUntil = 0;                 // 連續發問節流（避免洗頻）
 let _wcIdleTimer = null;                     // 每分鐘世界頻道自動閒聊
 let _wcRecentIdleLines = [];                 // 避免短時間重複抽到相同閒聊
@@ -2155,7 +2155,7 @@ if (q === '/gm hp 99999') {
 }
 
 let now = Date.now();
-    let now = Date.now();
+  
     if (now < _wcAskCooldownUntil) {
         logWorld('<span class="wc-sys">你講太快了，讓別人也說一下話。</span>');
         return;
