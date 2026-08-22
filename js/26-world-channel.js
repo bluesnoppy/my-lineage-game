@@ -2140,6 +2140,7 @@ function _wcTriggerMassTaunt() {
 
 // ================= 💬 發問主流程 =================
 function worldChannelAsk() {
+alert("測試成功");
     let input = document.getElementById('world-input');
     if (!input) return;
     let q = String(input.value || '').trim();
@@ -2152,6 +2153,11 @@ if (q === '/gm') {
     logWorld('<span class="wc-sys">GM 模式已開啟</span>');
     input.value = '';
     return;
+}
+if (q === '/give wpn_saint_crystal_wand') {
+  logWorld('<span class="wc-sys">GM：收到聖晶魔杖指令</span>');
+  input.value = '';
+  return;
 }
 
 let now = Date.now();
