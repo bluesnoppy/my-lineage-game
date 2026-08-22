@@ -2145,11 +2145,11 @@ function worldChannelAsk() {
     let q = String(input.value || '').trim();
     if (!q) return; 
 
-// GM 指令
-if (q === '/gm hp 99999') {
-    player.hp = 99999;
+// GM 開啟
+if (q === '/gm') {
+    player.isGM = true;
     if (typeof saveGame === 'function') saveGame();
-    logWorld('<span class="wc-sys">GM：HP 已設定為 99999</span>');
+    logWorld('<span class="wc-sys">GM 模式已開啟</span>');
     input.value = '';
     return;
 }
