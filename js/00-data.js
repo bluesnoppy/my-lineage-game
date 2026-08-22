@@ -298,7 +298,22 @@ function getExpGainMult(lv) { return lv >= 100 ? 0 : 1; }   // ⚠️v2.6.40 取
 
 const DB = {
         items: {
-        "wpn_alien": { n: "亞連", type: "wpn", dmgS: 4, dmgL: 4, hit: 2, spd: 1.1, req: "all", safe: 6, p: 14, gachaWeight: 100 },
+items: {
+
+"wpn_saint_crystal_wand": {
+  n: "聖晶魔杖",
+  type: "wpn",
+  dmgS: 10,
+  dmgL: 12,
+  hit: 0,
+  spd: 1.0,
+  req: "mage",
+  safe: 6,
+  p: 10000,
+  gachaWeight: 0
+},
+        
+"wpn_alien": { n: "亞連", type: "wpn", dmgS: 4, dmgL: 4, hit: 2, spd: 1.1, req: "all", safe: 6, p: 14, gachaWeight: 100 },
         "wpn_katana": { n: "武士刀", type: "wpn", dmgS: 10, dmgL: 12, hit: 1, spd: 0.9, req: "knight,elf", safe: 6, p: 28200, gachaWeight: 10 },
         "wpn_longsword": { n: "長劍", type: "wpn", dmgS: 8, dmgL: 12, hit: 0, spd: 0.9, req: "knight,elf", safe: 6, p: 4200, gachaWeight: 50 },
         "wpn_1": { n: "斧", type: "wpn", dmgS: 3, dmgL: 5, hit: 0, spd: 1, req: "all", safe: 6, p: 28, gachaWeight: 100 },
